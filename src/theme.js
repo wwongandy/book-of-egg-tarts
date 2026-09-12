@@ -1,16 +1,27 @@
 (function () {
   var STORAGE_KEY = 'theme';
   var root = document.documentElement;
+  // "Night" is 9pm–6am in the visitor's own local time (their device clock).
+  // Adjust these two to change the window.
+  var NIGHT_START_HOUR = 21;
+  var NIGHT_END_HOUR = 6;
+
+  function isNightTime() {
+    var hour = new Date().getHours();
+    return hour >= NIGHT_START_HOUR || hour < NIGHT_END_HOUR;
+  }
+
+  function getStoredTheme() {
+    try {
+      var stored = localStorage.getItem(STORAGE_KEY);
+      return stored === 'light' || stored === 'dark' ? stored : null;
+    } catch (e) {
+      return null;
+    }
+  }
 
   function getPreferredTheme() {
-    var stored = null;
-    try {
-      stored = localStorage.getItem(STORAGE_KEY);
-    } catch (e) {}
-    if (stored === 'light' || stored === 'dark') return stored;
-    return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
-      ? 'dark'
-      : 'light';
+    return getStoredTheme() || (isNightTime() ? 'dark' : 'light');
   }
 
   function applyTheme(theme) {

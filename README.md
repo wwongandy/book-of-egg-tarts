@@ -85,6 +85,17 @@ automatically.
 
 Edit `content/about.md`. It's rendered the same way as a post page.
 
+## Light/dark mode
+
+The reader-mode toggle (bottom-right button) defaults to dark between 9pm
+and 6am in the visitor's own local time, and light the rest of the day —
+this is a plain clock check on their device, not a location lookup, done
+once when the page loads (a tab left open across the boundary won't flip
+on its own until it's reloaded). Once someone clicks the toggle, their
+explicit choice is remembered (`localStorage`) and overrides the clock for
+that browser from then on. Change the window by editing
+`NIGHT_START_HOUR` / `NIGHT_END_HOUR` at the top of `src/theme.js`.
+
 ## Local development
 
 ```bash
