@@ -29,7 +29,7 @@
       return;
     }
     if (matches.length === 0) {
-      container.innerHTML = '<div class="no-results">No posts match "' + escapeHtml(query) + '"</div>';
+      container.innerHTML = '<div class="no-results">No posts match \'' + escapeHtml(query) + '\'</div>';
       container.hidden = false;
       return;
     }

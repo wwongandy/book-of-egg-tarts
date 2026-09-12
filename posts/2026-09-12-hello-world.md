@@ -14,12 +14,12 @@ Sometimes I try to bake... even though I'm more of a chef thanks to my family ba
 
 ![baking](baking.jpg)
 
-But usually I am running somewhere! I recently achieved a bucket list item in completing the 270km / 40th year anniversary of Marathon des Sables legendary, but have bigger aspirations of winning the whole thing for the 50th year in 2036!
+But usually I am running somewhere! I recently achieved a bucket list item in completing the 270km / 40th year anniversary of Marathon des Sables legendary, but have bigger aspirations of *unlikely, but will try my damndest* winning the whole thing for the 50th year in 2036!
 
 ![mds](mds.jpeg "This is me 'running' the Marathon des Sables on a broken toe")
 
-And if I'm lucky, I might be doing all of the above in a different country! I have been very lucky traveling frequently across the world, from the concrete jungle of New York to the vast wilderness of Mongolia!
+And if I'm lucky, I might be doing all of the above in a different country! I have been very lucky traveling frequently across the world, from the concrete jungle of New York to the vast wilderness of Mongolia! *Note that I am nearing 30 (the end of our lives), so yes I am doing all of those stereotypical mid-life crises hobbies all at once.*
 
 ![netherlands](netherlands.mp4 "This is me running in Netherlands!")
 
-I am not sure who the target audience for this blog is, as the posts are mostly nonsensical ramblings of someone that doesn't know much about anything. Chances are if you're reading this, you are probably a friend, recruiter, or my mom. If not, feel free to reach out to me on the [contact page](../../contact/).
+I am not sure who the target audience for this blog is, as the posts are mostly nonsensical ramblings of someone that doesn't know much about anything. The reason this blog exists is because I want to code outside of working hours again, and this is a nice motivation for that. Chances are if you're reading this, you are probably a friend, recruiter, or my mom. If not, feel free to reach out to me on the [contact page](../../contact/).

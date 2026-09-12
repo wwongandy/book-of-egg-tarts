@@ -53,6 +53,24 @@ served from a subpath (as GitHub project pages are). Full URLs
 (`https://...`) and data URIs are left untouched, so external images still
 work exactly as written.
 
+To keep `images/` easier to navigate, you can also give each post its own
+subfolder, named after the post's markdown filename (including the date
+prefix). For `posts/2026-09-12-hello-world.md`, that's
+`images/2026-09-12-hello-world/`:
+
+```
+images/
+  2026-09-12-hello-world/
+    working.jpg
+    baking.jpg
+```
+
+The markdown reference stays exactly the same either way —
+`![Alt text](working.jpg)` — the build script checks that post's own
+subfolder first and falls back to `images/` directly if the file isn't
+there, so shared images can still just live at the top level. The About
+page (`content/about.md`) follows the same convention using `images/about/`.
+
 Every image is automatically capped at 300px tall and centered, regardless
 of its original size. Add a caption by adding a quoted title after the
 path — this is standard markdown image syntax:
