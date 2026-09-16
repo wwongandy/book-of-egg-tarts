@@ -122,7 +122,7 @@ function renderContactPage() {
   <div class="post-content">
     <div class="contact-links">
       <a class="button-link" href="https://www.linkedin.com/in/wei-wong-454995170/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-      <a class="button-link button-link-secondary" href="https://drive.google.com/file/d/1OmyWCsTszZx9D1Cb7-f0Vc5MCNmqaBsA/view?usp=sharing" target="_blank" rel="noopener noreferrer">Resume</a>
+      <a class="button-link button-link-secondary" href="https://drive.google.com/file/d/1uYYaLP2gMadUtcG6ne4bIofLi7NqT5O_/view?usp=sharing" target="_blank" rel="noopener noreferrer">Resume</a>
     </div>
     <p>You can also contact me using the form below, though I presume you already know me personally if you are reading this blog.</p>
   </div>
