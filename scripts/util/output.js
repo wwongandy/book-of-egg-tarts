@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const { SRC_DIR, IMAGES_DIR, DIST_DIR } = require('./config');
+const { SRC_DIR, ASSETS_DIR, DIST_DIR } = require('./config');
 
 function rimraf(dir) {
   fs.rmSync(dir, { recursive: true, force: true });
@@ -19,9 +19,9 @@ function copyStaticAssets() {
   }
 }
 
-function copyImages() {
-  if (!fs.existsSync(IMAGES_DIR)) return;
-  fs.cpSync(IMAGES_DIR, path.join(DIST_DIR, 'images'), { recursive: true });
+function copyAssets() {
+  if (!fs.existsSync(ASSETS_DIR)) return;
+  fs.cpSync(ASSETS_DIR, path.join(DIST_DIR, 'assets'), { recursive: true });
 }
 
-module.exports = { rimraf, writeFile, copyStaticAssets, copyImages };
+module.exports = { rimraf, writeFile, copyStaticAssets, copyAssets };

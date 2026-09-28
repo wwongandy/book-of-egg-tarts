@@ -1,0 +1,92 @@
+/* Styles for egg-tart-recipe.html, driven by tart.js. */
+
+.tart-recipe img {
+  width: min(100%, 480px);
+  max-height: none;
+  image-rendering: pixelated;
+}
+
+.tart-stage {
+  position: relative;
+  margin: 1.5rem 0;
+}
+
+.tart-stage .tart-svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.tart-part {
+  cursor: pointer;
+  outline: none;
+  transition: filter 0.12s ease;
+}
+
+.tart-part:hover,
+.tart-part:focus-visible,
+.tart-part.is-active {
+  filter: brightness(1.12) drop-shadow(0 0 0.6px #fff8e0);
+}
+
+.tart-ready .tart-popup {
+  position: absolute;
+  z-index: 10;
+  width: min(400px, calc(100vw - 16px));
+  padding: 0.75rem 1rem 0.5rem;
+  background: var(--card-bg);
+  color: var(--fg);
+  border: 3px solid #b7773a;
+  border-radius: 0;
+  box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.18);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  /* Follows the cursor, so it must not steal hover from the tart under it. */
+  pointer-events: none;
+}
+
+.tart-ready .tart-popup[data-part='custard'] {
+  border-color: #e9a800;
+}
+
+.tart-popup h3 {
+  margin: 0 0 0.35rem;
+  font-size: 1rem;
+}
+
+.tart-popup h4 {
+  margin: 0.6rem 0 0.2rem;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+}
+
+.tart-popup .tart-note {
+  margin: 0;
+  color: var(--muted);
+}
+
+.tart-popup ol,
+.tart-popup ul {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.tart-popup li {
+  margin-bottom: 0.2rem;
+}
+
+@media (max-width: 600px) {
+  .tart-ready .tart-popup {
+    position: fixed;
+    left: 8px;
+    right: 8px;
+    bottom: 8px;
+    width: auto;
+    max-height: 60vh;
+    overflow-y: auto;
+    pointer-events: auto;
+  }
+}

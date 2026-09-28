@@ -40,7 +40,7 @@ picks it up and it never appears on the live site.
 
 ## Adding images to a post
 
-Drop image files into the `images/` folder at the project root, then
+Drop image files into the `assets/` folder at the project root, then
 reference them in a post by filename alone:
 
 ```markdown
@@ -53,13 +53,13 @@ served from a subpath (as GitHub project pages are). Full URLs
 (`https://...`) and data URIs are left untouched, so external images still
 work exactly as written.
 
-To keep `images/` easier to navigate, you can also give each post its own
+To keep `assets/` easier to navigate, you can also give each post its own
 subfolder, named after the post's markdown filename (including the date
 prefix). For `posts/2026-09-12-hello-world.md`, that's
-`images/2026-09-12-hello-world/`:
+`assets/2026-09-12-hello-world/`:
 
 ```
-images/
+assets/
   2026-09-12-hello-world/
     working.jpg
     baking.jpg
@@ -67,9 +67,9 @@ images/
 
 The markdown reference stays exactly the same either way —
 `![Alt text](working.jpg)` — the build script checks that post's own
-subfolder first and falls back to `images/` directly if the file isn't
+subfolder first and falls back to `assets/` directly if the file isn't
 there, so shared images can still just live at the top level. The About
-page (`content/about.md`) follows the same convention using `images/about/`.
+page (`content/about.md`) follows the same convention using `assets/about/`.
 
 Every image is automatically capped at 300px tall and centered, regardless
 of its original size. Add a caption by adding a quoted title after the
@@ -95,6 +95,23 @@ It renders as a muted, autoplaying, looping `<video>` with controls — no
 audio support is needed for this, so it's always muted. Local files, path
 resolution, and captions all work exactly like they do for images. Prefer
 `.mp4` or `.webm`; `.mov` often won't play in Chrome or Firefox.
+
+### Embedding HTML
+
+For interactive content that markdown can't express, write it as an HTML
+file in the post's assets folder and reference it with the same syntax:
+
+```markdown
+![Interactive egg tart recipe](egg-tart-recipe.html)
+```
+
+The build inlines the file's contents into the page at that spot. Any
+`src`/`href` attributes inside it resolve exactly like markdown asset
+references, so the file pulls in its own scripts, styles, and images by
+filename, e.g. `<script src="tart.js"></script>`. Nothing is loaded
+behind the scenes: everything a post uses is referenced explicitly, either
+in its markdown or in an HTML file it embeds. See
+`assets/2026-09-28-egg-tart-recipe/` for a working example.
 
 Push to `main` and GitHub Actions rebuilds and redeploys the site
 automatically.

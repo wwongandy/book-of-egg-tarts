@@ -99,11 +99,11 @@ A regular URL works exactly as you'd expect:
 
 ![A scenic placeholder](https://picsum.photos/600/300)
 
-Local images work too. Drop a file into the `images/` folder at the project root, then reference it by filename alone — no need to think about base paths or how deeply nested the current page is:
+Local images work too. Drop a file into the `assets/` folder at the project root, then reference it by filename alone — no need to think about base paths or how deeply nested the current page is:
 
 ![A local sample image](sample.svg)
 
-That second image is `images/sample.svg` in this repo, referenced in this post as just `![A local sample image](sample.svg)`.
+That second image is `assets/sample.svg` in this repo, referenced in this post as just `![A local sample image](sample.svg)`.
 
 All images are automatically capped at 300px tall and centered on the page, so a photo never overwhelms a post regardless of its original size.
 
@@ -129,7 +129,7 @@ The exact same image syntax embeds a video instead, if the file extension is a v
 
 ![A sample clip](https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4 "A public-domain sample clip, autoplaying and looping")
 
-Local video files work the same way images do — drop one in `images/` and reference it by filename alone. Captions work identically too (the quoted title above became the caption under this clip). Stick to `.mp4` or `.webm` for the widest browser support; `.mov` files often don't play in Chrome or Firefox.
+Local video files work the same way images do — drop one in `assets/` and reference it by filename alone. Captions work identically too (the quoted title above became the caption under this clip). Stick to `.mp4` or `.webm` for the widest browser support; `.mov` files often don't play in Chrome or Firefox.
 
 ## Horizontal rule
 

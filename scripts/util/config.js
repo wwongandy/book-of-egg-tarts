@@ -5,7 +5,7 @@ const ROOT = path.join(__dirname, '..', '..');
 const POSTS_DIR = path.join(ROOT, 'posts');
 const CONTENT_DIR = path.join(ROOT, 'content');
 const SRC_DIR = path.join(ROOT, 'src');
-const IMAGES_DIR = path.join(ROOT, 'images');
+const ASSETS_DIR = path.join(ROOT, 'assets');
 const DIST_DIR = path.join(ROOT, 'dist');
 const PER_PAGE = 10;
 
@@ -33,7 +33,7 @@ module.exports = {
   POSTS_DIR,
   CONTENT_DIR,
   SRC_DIR,
-  IMAGES_DIR,
+  ASSETS_DIR,
   DIST_DIR,
   PER_PAGE,
   BASE,

@@ -1,0 +1,6 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    { "name": "blog", "runtimeExecutable": "npx", "runtimeArgs": ["--yes", "serve", "dist", "-l", "4173"], "port": 4173 }
+  ]
+}

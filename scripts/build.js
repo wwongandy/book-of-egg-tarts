@@ -7,7 +7,7 @@ const {
   renderAboutPage,
   renderContactPage,
 } = require('./util/templates');
-const { rimraf, writeFile, copyStaticAssets, copyImages } = require('./util/output');
+const { rimraf, writeFile, copyStaticAssets, copyAssets } = require('./util/output');
 
 function build() {
   rimraf(DIST_DIR);
@@ -48,7 +48,7 @@ function build() {
   writeFile('.nojekyll', '');
 
   copyStaticAssets();
-  copyImages();
+  copyAssets();
 
   console.log(`Built ${posts.length} post(s) across ${totalPages} page(s). BASE=${BASE}`);
 }
